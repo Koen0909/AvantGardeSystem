@@ -1,0 +1,41 @@
+
+<body>
+    <div class="whitebox">
+        <div class="graybox">
+
+            <h2><b>Login as</b></h2>
+
+              <div class="side-by-side">
+                    <span class="artist"><b>Artist</b></span>
+                    <span class="vertical-line"></span> <!-- Vertical line -->
+                    <span class="buyer"><b>Buyer</b></span> 
+              </div> 
+              <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+                <div class="input-fields">
+                  <input type="email" formControlName="email" placeholder="Email">
+                  <input type="password" formControlName="password" placeholder="Password">
+                </div>    
+                <div class="btn">
+                  <button type="submit" [disabled]="loginForm.invalid"><h2>LOGIN</h2></button> 
+                </div>
+
+                <h4>OR</h4>
+
+                <div class="loginWithGoogle">
+                  <button type="button" (click)="loginWithGoogle()">
+                    <img src="../../assets/images/Logo-google-icon-PNG.png" alt="Login with Google">
+                  </button>
+                </div>
+                <!-- <div class="forgotPassword">
+                  <a href="/passwordUpdate"><p>Forgot Password</p></a>
+                </div> -->
+
+              </form>
+
+             <h2><b><u><a href="buyer-register">Create Account</a></u></b></h2>
+
+        </div> 
+    </div>
+   
+    
+</body>

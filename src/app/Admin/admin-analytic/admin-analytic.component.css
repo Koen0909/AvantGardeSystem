@@ -1,0 +1,68 @@
+body {
+  background-image: url(../../../assets/background/homeBackGround.png); /* Your background image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* Fix the background image in place */
+  overflow-y: auto;
+  font-family: 'Holiday', sans-serif; 
+  height: 100vh;
+  width: 100%;  
+  background-position: center;
+}
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+}
+
+.back-button a {
+  color: white;
+  text-decoration: none;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}
+
+.analytics-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+h1 {
+  margin-bottom: 20px;
+}
+
+.error-message {
+  color: red;
+  margin-bottom: 20px;
+}
+
+.card {
+  background: #f0f0f0;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 20px;
+  margin: 10px;
+  width: 300px;
+  text-align: center;
+}
+
+.card h2 {
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 24px;
+  font-weight: bold;
+}

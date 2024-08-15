@@ -1,0 +1,26 @@
+<body>
+  <div class="container">
+    <h2>Your Cart</h2>
+    <button class="back-button"><a href="/buyer-home">Back</a></button>
+    <div class="cart-list">
+      <ul>
+        <li *ngFor="let item of cartItems$ | async">
+          <input type="checkbox" [checked]="checkedItems.has(item.id)" (change)="updateTotal($event, item)">
+          <img [src]="item.imageUrl" alt="{{ item.name }}">
+          <div class="item-details">
+            <h3>{{ item.name }} by {{ item.creator }}</h3>
+            <p><b>Price:</b> ₱{{ item.price }}</p>
+            <p><b>Size:</b> {{ item.size }}</p>
+            <p><b>Description:</b> {{ item.description }}</p>
+            <div class="expire"><p><b>Item will be remove within 24 hours:</b> {{ item.expirationDate | date:'shortTime' }}</p></div>
+            <button (click)="removeFromCart(item.id)">Remove from Cart</button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="total-price">
+      <h3>Total Price: ₱{{ totalPrice.toFixed(2) }}</h3>
+    </div>
+    <button class="place-order-button" (click)="placeOrder()">Place Order</button>
+  </div>  
+</body>

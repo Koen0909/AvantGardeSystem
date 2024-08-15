@@ -1,0 +1,182 @@
+html, body {
+  margin: 0; /* Remove default margins */
+  padding: 0; /* Remove default paddings */
+  height: 100%; /* Full height */
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+body {
+  background-image: url(../../../../assets/background/homeBackGround.png); /* Your background image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* Fix the background image in place */
+  background-position: center;
+  font-family: 'Holiday', sans-serif; 
+  overflow-y: auto; /* Allow vertical overflow */
+}
+
+.navbar {
+  position: fixed; /* Position the header */
+  top: 0; /* Position it at the top of the viewport */
+  left: 0; /* Position it at the left of the viewport */
+  right: 0; /* Position it at the right of the viewport */
+  height: 100px; /* Set the height of the header */
+  background-color: rgba(112, 60, 132, 0.815); /* Set the background color with reduced opacity */
+  font-family: 'Canvas Sans', sans-serif;
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically */
+  z-index: 1; /* Set a higher z-index to keep it above other elements */
+}
+
+.obra-logo img {
+  margin-top: 4px;
+  margin-left: 25px;
+  width: 90px; /* Set the width of the image */
+  height: auto; /* Maintain aspect ratio */
+}
+
+.title {
+  margin-left: 25px;
+  color: #fff; /* Set text color */
+  font-size: 24px; /* Set font size */
+}
+
+.nav-btn {
+  display: flex; /* Use flexbox for layout */
+  margin-left: auto;
+  margin-right: 50px;
+  cursor: pointer; /* Change cursor to pointer on hover */
+  transition: background-color 0.3s ease; /* Add transition effect */
+}
+
+.nav-btn a {
+  text-decoration: none; /* Remove underline */
+  color: white; /* Set default text color to white */
+}
+
+.home-btn a {
+  color: #5CE1E6; /* Reset color for .home-btn to its initial value */
+}
+
+.nav-btn h2:hover {
+  color: #5CE1E6; /* Set hover color for all buttons */
+}
+
+.home-btn h2:hover {
+  color: white; /* Specify the color you want on hover */
+}
+
+.home-btn,
+.collection-btn,
+.about-btn {
+  margin-right: 60px;
+}
+
+.profile-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 200%;
+  margin-top: 50px; /* Offset to account for fixed navbar */
+  padding-bottom: 20px; /* Add padding to prevent overflow */
+  box-sizing: border-box; /* Include padding in the element's total width and height */
+}
+
+.profile-container {
+  background-color: rgba(255, 255, 255, 0.5); /* Background color with opacity */
+  padding: 40px; /* Adjust padding as needed */
+  border-radius: 10px; /* Rounded corners for the container */
+  width: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
+  text-align: center; /* Center align content inside profile container */
+  box-sizing: border-box; /* Ensure padding and border are included in width */
+}
+
+.profile-picture {
+  border-radius: 50%; /* Apply circular border-radius */
+  width: 120px; /* Adjust width as needed */
+  height: 120px; /* Adjust height as needed */
+  object-fit: cover; /* Maintain aspect ratio and cover the entire space */
+  margin: 0 auto 20px; /* Center the image and add bottom margin */
+}
+
+.content {
+  margin: 0; /* Reset margin for content */
+}
+
+.content h2 {
+  margin-bottom: 20px; /* Add margin below the heading */
+}
+
+.profile-form {
+  max-width: 400px; /* Set maximum width for the form */
+  margin: 0 auto; /* Center the form horizontally */
+  padding: 20px; /* Add padding */
+  background-color: #f7f7f7; /* Background color */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Add shadow */
+}
+
+.form-group {
+  margin-bottom: 20px; /* Add margin between form groups */
+}
+
+label {
+  display: block; /* Display labels as block elements */
+  font-weight: bold; /* Make labels bold */
+  margin-bottom: 5px; /* Add margin below labels */
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+select {
+  width: 100%; /* Set input fields to 100% width */
+  padding: 10px; /* Add padding */
+  border-radius: 5px; /* Rounded corners for input fields */
+  border: 1px solid #ccc; /* Add border */
+  box-sizing: border-box; /* Include padding and border in width */
+}
+
+button {
+  background-color: #007bff; /* Button background color */
+  color: #fff; /* Button text color */
+  padding: 10px 20px; /* Add padding */
+  border: none; /* Remove border */
+  border-radius: 5px; /* Rounded corners for button */
+  cursor: pointer; /* Change cursor to pointer on hover */
+}
+
+button:hover {
+  background-color: #0056b3; /* Button background color on hover */
+}
+
+.backBtn {
+  position: absolute; /* Position the back button */
+  top: 150px; /* Adjust top position as per your layout */
+  left: 50px; /* Adjust left position as per your layout */
+}
+
+.backBtn button {
+  background-color: #7E97B0; /* Button background color */
+  border: 2px solid transparent; /* Border color */
+  border-radius: 20px; /* Rounded corners */
+  padding: 10px 20px; /* Padding */
+  color: #fff; /* Text color */
+  font-size: 16px; /* Font size */
+}
+
+.backBtn button:hover {
+  background-color: #fff; /* Background color on hover */
+  border: 2px solid #7E97B0; /* Border color on hover */
+  color: #7E97B0; /* Text color on hover */
+}
+
+.backBtn button:focus {
+  outline: none; /* Remove outline when button is focused */
+}
+
+.backBtn button a {
+  text-decoration: none; /* Remove underline from the link */
+  color: inherit; /* Inherit text color */
+}

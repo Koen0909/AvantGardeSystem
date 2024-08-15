@@ -1,0 +1,37 @@
+
+<body>    
+    <div class="whitebox">
+        <div class="graybox">
+           
+            <h2><b>Create Account As Artist</b></h2>
+
+              <div class="side-by-side">
+                    <a href="/seller-register">
+                        <span class="artist"><b>Artist</b></span>
+                    </a>
+                   
+                    <a href="/buyer-register">
+                        <span class="buyer"><b>Buyer</b></span> 
+                    </a>
+              </div> 
+              <form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+                <div class="input-fields">
+                    <input type="email" formControlName="displayName" placeholder="UserName">
+                    <input type="email" formControlName="email" placeholder="Email">
+                    <input type="password" formControlName="password" placeholder="Password">
+                    <input type="password" formControlName="confirmPassword" placeholder="Confirm Password">
+                </div>
+                <div class="btn">
+                    <button type="submit" [disabled]="registerForm.invalid"><h2>SIGN UP</h2></button>
+                </div>
+                <div class="already-have-account">
+                    <a href="/login">
+                        <h2><u><b>Already Have Account</b></u></h2>
+                    </a>
+                </div>
+            </form>
+        </div> 
+    </div>
+   
+    
+</body>

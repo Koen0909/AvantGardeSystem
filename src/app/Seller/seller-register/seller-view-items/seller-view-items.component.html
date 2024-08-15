@@ -1,0 +1,25 @@
+<body>
+    <!-- seller-view-items.component.html -->
+
+<div class="items-container">
+    <h1>Your Items</h1>
+    <div *ngIf="items.length === 0" class="no-items">
+        <p>No items found.</p>
+    </div>
+    <div class="item" *ngFor="let item of items">
+        <img [src]="item.imageUrl" alt="Item Image">
+        <div class="item-details">
+            <h2>{{ item.artName }}</h2>
+            <p><strong>Medium:</strong> {{ item.medium }}</p>
+            <p><strong>Size:</strong> {{ item.size }}</p>
+            <p><strong>Frame:</strong> {{ item.frame }}</p>
+            <p><strong>Protection:</strong> {{ item.protection }}</p>
+            <p><strong>Price:</strong> ${{ item.price }}</p>
+            <p><strong>ObraShare's:</strong> {{ item.obraShares }}</p>
+            <p><strong>Date Finished:</strong> {{ item.dateFinished | date }}</p>
+            <p><strong>Created by:</strong> {{ item.creator }}</p>
+            <p><strong>Description:</strong> {{ item.description }}</p>
+        </div>
+    </div>
+</div>
+</body>

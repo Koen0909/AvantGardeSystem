@@ -1,0 +1,77 @@
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="https://fonts.googleapis.com/css2?family=Holiday&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+
+<body>
+    <div class="navbar">
+        <div class="obra-logo"> 
+            <img src="../../../assets/images/obralogo.png" alt="">
+        </div>
+        <div class="title">
+            <h2><b>OBRAGRAPHIA</b></h2>
+        </div>
+        <div class="nav-btn">
+            <div class="home-btn"><a href="/admin-home"><h2>HOME</h2></a></div>
+            <div class="collection-btn"><a href="/admin-collection"><h2>COLLECTION</h2></a></div>
+            <div class="about-btn"><a href=""><h2>ABOUT</h2></a></div>
+        </div>
+        
+        <div class="whitebox">
+            <div class="input-fields">
+                <div class="select-user">
+                    <label for="userSelect">Select User:</label>
+                    <select id="userSelect" [(ngModel)]="selectedUserId">
+                        <option *ngFor="let user of users" [value]="user.uid">{{ user.email }}</option>
+                    </select>
+                </div>
+                <input type="text" id="artName" name="artName" placeholder="Art Name" [(ngModel)]="product.artName">
+                <input type="text" id="medium" name="medium" placeholder="Medium" [(ngModel)]="product.medium">
+                <input type="text" id="size" name="size" placeholder="Size" [(ngModel)]="product.size">
+                <input type="text" id="frame" name="frame" placeholder="Frame" [(ngModel)]="product.frame">
+                <input type="text" id="protection" name="protection" placeholder="Protection" [(ngModel)]="product.protection">
+                <input type="number" id="price" name="price" placeholder="Price" [(ngModel)]="product.price">
+                <input type="text" id="obraShares" name="obraShares" placeholder="ObraShare's" [(ngModel)]="product.obraShares">
+                <input type="date" id="dateFinished" name="dateFinished" placeholder="Date Finished" [(ngModel)]="product.dateFinished">  
+                <input type="text" id="creator" name="creator" placeholder="Created by" [(ngModel)]="product.creator">
+                <input type="text" id="description" name="description" placeholder="Description" [(ngModel)]="product.description">   
+            </div>
+            <div class="btn">
+                <button type="button" (click)="onUpload()"><h2>Upload</h2></button>
+            </div>
+        </div>
+        <div class="whitebox2">
+            <input type="file" (change)="onFileSelected($event)">
+        </div>
+        <aside class="sidebar">
+            <div class="logo">
+                <img src="../../assets/images/obra_logo.jpg" alt="logo">
+                <h2>ADMIN</h2>
+            </div>
+            <ul class="links">         
+                <hr>
+                <h4>Advanced</h4>
+                <li>
+                    <span class="material-symbols-outlined">ambient_screen</span>
+                    <a href="admin-upload">Upload Art</a>
+                </li>
+                <li>
+                    <span class="material-symbols-outlined">monitoring</span>
+                    <a href="/admin-analytic">Analytic/No.Users</a>
+                </li>
+                <li>
+                    <span class="material-symbols-outlined">group</span>
+                    <a href="/viewScholars">View Scholars</a>
+                </li>
+                <li>
+                    <span class="material-symbols-outlined">lab_profile</span>
+                    <a href="#">Reports</a>
+                </li>
+                <li class="logout-link">
+                    <span class="material-symbols-outlined">logout</span>
+                    <a href="#" (click)="logout()">Logout</a>
+                </li>
+            </ul>
+        </aside>
+    </div>
+</body>

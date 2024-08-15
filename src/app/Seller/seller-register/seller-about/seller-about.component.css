@@ -1,0 +1,205 @@
+body {
+    background-image: url(../../../../assets/background/homeBackGround.png); /* Your background image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Fix the background image in place */
+   
+}
+.navbar {
+    position: fixed; /* Position the header */
+    top: 0; /* Position it at the top of the viewport */
+    left: 0; /* Position it at the left of the viewport */
+    right: 0; /* Position it at the right of the viewport */
+    height: 100px; /* Set the height of the header */
+    background-color: rgba(112, 60, 132, 0.815); /* Set the background color with reduced opacity */
+    font-family: 'Canvas Sans', sans-serif;
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically */
+    z-index: 1; /* Set a higher z-index to keep it above other elements */
+}
+.obra-logo img {
+    margin-top: 4px;
+    margin-left: 25px;
+    width: 90px; /* Set the width of the image */
+    height: auto; /* Maintain aspect ratio */
+}
+.title {
+    margin-top: 1%;
+    margin-left: 25px;
+    color: #fff; /* Set text color */
+    font-size: 24px; /* Set font size */
+  }
+  .nav-btn{
+    margin-top: 1%;
+    display: flex; /* Use flexbox for layout */
+    margin-left: 550px;
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Add transition effect */
+  }
+.nav-btn a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Set default text color to white */
+}
+
+.about-btn a {
+    color: #5CE1E6; /* Reset color for .home-btn to its initial value */
+}
+.nav-btn h2:hover {
+    color: #5CE1E6; /* Set hover color for all buttons */
+}
+.about-btn  h2:hover {
+    color: white; /* Specify the color you want on hover */;
+} 
+.about-btn,
+.home-btn,
+.collection-btn,
+.log-out-btn {
+    margin-right: 60px;
+}  
+
+.obra {
+    margin-top: 150px;
+    margin-left: 85px;
+    font-size: 35px;
+    font-family: 'Canva The Seasons', sans-serif;
+    /* Additional CSS styles for the .obra class */
+}
+.description{
+    margin-left: 85px;
+}
+.pics{
+    margin-left: 40%;
+    margin-top: -45%;
+    
+}
+.pics img {
+    width: 350px; /* Set the width of the images */
+    height: 600px; /* Let the height adjust automatically to maintain aspect ratio */
+    margin-bottom: 10px; /* Add some spacing between images */
+}
+
+.pics2{
+    margin-left: 69%;
+    margin-top: -39%;
+}
+.pics3{
+    margin-left: 69%;
+    margin-top: 1%;
+}
+
+
+
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0; /* Changed from left: 0 */
+    width: 110px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: transparent;
+    transition: width 0.3s ease;
+    z-index: 1;
+}
+
+.sidebar:hover {
+    width: 260px;
+    height: 100%;
+    background-color: #6F3C84;
+}
+
+.sidebar:hover img{
+    margin-left: 40%;
+}
+
+
+.sidebar .logo {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 25px 10px 15px;
+}
+
+.logo img {
+    width: 50px;
+    border-radius: 50%;
+}
+
+.logo h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-left: 15px;
+    display: none;
+}
+
+.sidebar:hover .logo h2 {
+    display: block;
+}
+
+.sidebar .links {
+    list-style: none;
+    margin-top: 20px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    height: calc(100% - 140px);
+}
+
+.sidebar .links::-webkit-scrollbar {
+    display: none;
+}
+
+.links li {
+    display: flex;
+    border-radius: 4px;
+    align-items: center;
+}
+
+.links li:hover {
+    cursor: pointer;
+    background: #000000;
+    color: #fff;
+}
+
+.links h4 {
+    color: #ffffff;
+    font-weight: 500;
+    display: none;
+    margin-bottom: 10px;
+}
+
+.sidebar:hover .links h4 {
+    display: block;
+}
+
+.links hr {
+    margin: 10px 8px;
+    border: 1px solid #ffffff;
+}
+
+.sidebar:hover .links hr {
+    border-color: transparent;
+}
+
+.links li span {
+    padding: 12px 10px;
+}
+
+.links li a {
+    padding: 10px;
+    color: #ffffff;
+    display: none;
+    font-weight: 500;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.sidebar:hover .links li a {
+    display: block;
+}
+
+.links .logout-link {
+    margin-top: 20px;
+}
+
+

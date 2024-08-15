@@ -1,0 +1,187 @@
+body {
+    background-image: url(../../assets/background/BackGround.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: auto;
+}
+
+.whitebox {
+    width: 500px;
+    height: 590px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 1px rgba(255, 255, 255, 0.4);
+    border-radius: 30px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.graybox {
+    width: 475px;
+    height: 560px;
+    background-color: #1D2D21;
+    border: 1px solid #1D2D21;
+    border-radius: 30px;
+    padding: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Canvas Sans', sans-serif;
+}
+
+.graybox h2 {
+    color: #ffffff;
+    font-size: 30px;
+    text-align: center;
+}
+
+.graybox a {
+    color: #ffffff; /* Change link color to white */
+    text-decoration: none;
+}
+
+.graybox a:hover {
+    text-decoration: underline; /* Optional: underline on hover */
+}
+
+.graybox span.artist {
+    color: #CB6CE6;
+    font-size: 35px;
+}
+
+.graybox span.buyer {
+    color: #FFDE59;
+    font-size: 35px;
+}
+
+.side-by-side {
+    text-align: center;
+}
+
+.side-by-side span {
+    margin-bottom: -4%;
+    display: inline-block;
+}
+
+.vertical-line {
+    width: 2px;
+    height: 65px;
+    background-color: #ffffff;
+    margin: 0 20px;
+    transform: rotate(180deg);
+}
+
+.input-fields input {
+    width: 290px;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    padding: 0 10px;
+    margin-bottom: 10px;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.input-fields input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+.input-fields {
+    margin-top: 8%;
+    text-align: center;
+}
+
+.btn {
+    text-align: center;
+    margin-top: 2%;
+}
+
+.btn button {
+    background-color: transparent;
+    border: 2px solid #5CE1E6;
+    border-radius: 20px;
+    padding: 10px 20px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.btn button h2 {
+    color: #5CE1E6;
+    margin: 0;
+    font-size: 24px;
+}
+
+.btn button:hover {
+    background-color: #5CE1E6;
+}
+
+.btn button:hover h2 {
+    color: #1D2D21;
+}
+
+.btn button:focus {
+    outline: none;
+}
+
+.loginWithGoogle {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.loginWithGoogle img {
+    width: 24px;
+    height: 24px;
+}
+
+.loginWithGoogle a {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+h4 {
+    overflow: hidden;
+    text-align: center;
+    color: white;
+}
+
+h4::before,
+h4::after {
+    background-color: #ffffff;
+    content: "";
+    display: inline-block;
+    height: 1px;
+    position: relative;
+    vertical-align: middle;
+    width: 30%;
+}
+
+h4::before {
+    right: 0.5em;
+    margin-left: -50%;
+}
+
+h4::after {
+    left: 0.5em;
+    margin-right: -50%;
+}
+button {
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    color: white;
+  }
+  .forgotPassword {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    height: 50px; /* Adjust the height as needed */
+    margin-top: 10px;
+    color: aqua;
+  }
+  

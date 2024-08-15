@@ -1,0 +1,61 @@
+body {
+    background-image: url(../../../../assets/background/homeBackGround.png
+    );
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    overflow-y: auto; /* Enable vertical scrolling for the entire page */
+    font-family: 'Holiday', sans-serif; 
+    height: 100vh;
+    width: 100%;
+    background-position: center;
+    margin: 0; /* Remove default margin */
+  }
+
+/* seller-view-items.component.css */
+
+.items-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.no-items {
+    text-align: center;
+    font-size: 18px;
+    color: #666;
+}
+
+.item {
+    border: 1px solid #ddd;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.item img {
+    max-width: 200px;
+    border-radius: 8px;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.item-details h2 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.item-details p {
+    margin: 5px 0;
+    font-size: 16px;
+}

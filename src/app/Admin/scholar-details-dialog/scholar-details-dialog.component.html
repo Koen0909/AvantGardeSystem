@@ -1,0 +1,37 @@
+<h2 mat-dialog-title>Scholar Info</h2>
+<div mat-dialog-content>
+  <form>
+    <div>
+      <label for="fullName">Full Name:</label>
+      <input type="text" id="fullName" [(ngModel)]="data.fullName" name="fullName" required>
+    </div>
+    <div>
+      <label for="middleName">Middle Name:</label>
+      <input type="text" id="middleName" [(ngModel)]="data.middleName" name="middleName" required>
+    </div>
+    <div>
+      <label for="lastName">Last Name:</label>
+      <input type="text" id="lastName" [(ngModel)]="data.lastName" name="lastName" required>
+    </div>
+    <div>
+      <label for="age">Age:</label>
+      <input type="number" id="age" [(ngModel)]="data.age" name="age" required>
+    </div>
+    <div>
+      <label for="course">Course:</label>
+      <input type="text" id="course" [(ngModel)]="data.course" name="course" required>
+    </div>
+    <div>
+      <label for="homeAddress">Home Address:</label>
+      <input type="text" id="homeAddress" [(ngModel)]="data.homeAddress" name="homeAddress" required>
+    </div>
+    <div>
+      <label for="yearLevel">Year Level:</label>
+      <input type="text" id="yearLevel" [(ngModel)]="data.yearLevel" name="yearLevel" required>
+    </div>
+  </form>
+</div>
+<div mat-dialog-actions>
+  <button mat-button (click)="onNoClick()">Cancel</button>
+  <button mat-button (click)="save()">Save</button>
+</div>

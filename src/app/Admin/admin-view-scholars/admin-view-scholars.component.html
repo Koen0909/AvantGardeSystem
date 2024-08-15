@@ -1,0 +1,52 @@
+<body>
+  <div class="content-row">
+
+    <button class="back-button"><a href="/admin-upload">Back</a></button>
+  
+    <div class="form-container">
+      <h3>Add Scholar</h3>
+      <form (submit)="addScholar($event)">
+        <div>
+          <label for="fullName">Full Name:</label>
+          <input type="text" id="fullName" [(ngModel)]="newScholar.fullName" name="fullName" required>
+        </div>
+        <div>
+          <label for="middleName">Middle Name:</label>
+          <input type="text" id="middleName" [(ngModel)]="newScholar.middleName" name="middleName" required>
+        </div>
+        <div>
+          <label for="lastName">Last Name:</label>
+          <input type="text" id="lastName" [(ngModel)]="newScholar.lastName" name="lastName" required>
+        </div>
+        <div>
+          <label for="age">Age:</label>
+          <input type="number" id="age" [(ngModel)]="newScholar.age" name="age" required>
+        </div>
+        <div>
+          <label for="course">Course:</label>
+          <input type="text" id="course" [(ngModel)]="newScholar.course" name="course" required>
+        </div>
+        <div>
+          <label for="homeAddress">Home Address:</label>
+          <input type="text" id="homeAddress" [(ngModel)]="newScholar.homeAddress" name="homeAddress" required>
+        </div>
+        <div>
+          <label for="yearLevel">Year Level:</label>
+          <input type="text" id="yearLevel" [(ngModel)]="newScholar.yearLevel" name="yearLevel" required>
+        </div>
+        <button type="submit">Add Scholar</button>
+      </form>
+    </div>
+  
+    <div class="form-container">
+      <h3>Scholars List</h3>
+      <ul>
+        <li *ngFor="let scholar of scholars">
+          <span (click)="openScholarDialog(scholar)">{{ scholar.fullName }} - {{ scholar.course }}</span>
+          <button (click)="deleteScholar(scholar)">Delete</button>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+</body>

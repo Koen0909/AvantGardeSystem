@@ -1,0 +1,16 @@
+<body>
+  <button class="back-button"><a href="/admin-upload">Back</a></button>
+<div class="analytics-container">
+  <h1>User Domain Analytics</h1>
+  <div *ngIf="errorMessage" class="error-message">{{ errorMessage }}</div>
+  <div class="card">
+    <h2> &#64;sccpag.edu.ph Users</h2>
+    <p>{{ sccpagUsers }}</p>
+  </div>
+  <div class="card">
+    <h2>Other Domain Users</h2>
+    <p>{{ otherUsers }}</p>
+  </div>
+</div>
+</body>
+ 

@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OBRAGRAPHIA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Holiday&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200">
+  <style>
+    /* Your CSS will be added here */
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <div class="obra-logo">
+      <img src="../../../assets/images/obralogo.png" alt="OBRA Logo">
+    </div>
+    <div class="title">
+      <h2><b>OBRAGRAPHIA</b></h2>
+    </div>
+    <div class="nav-btn">
+      <div class="home-btn"><a href="/buyer-home"><h2>HOME</h2></a></div>
+      <div class="collection-btn"><a href="/buyer-collection"><h2>COLLECTION</h2></a></div>
+      <div class="about-btn"><a href="buyer-about"><h2>ABOUT</h2></a></div>
+    </div>
+  </div>
+
+  <aside class="sidebar">
+    <div class="logo">
+      <div *ngIf="profile$ | async as profile">
+                      <img [src]="profile.photoURL" alt="Profile Picture">
+                      <h2>{{ profile.displayName }}</h2>
+                      <!-- Display other profile information as needed -->
+                    </div>
+    </div>
+   <ul class="links">
+                    <h4>Account</h4>
+                    <li>
+                    <span class="material-symbols-outlined">person</span>
+                      <a href="/buyer-profile">Profile</a>
+                    </li>
+                    <li>
+                      <span class="material-symbols-outlined">shopping_cart</span>
+                      <a href="/buyer-cart">Cart</a>
+                    </li>
+                    <hr>
+                    <h4>Advanced</h4>                 
+                      <li class="logout-link">
+                        <span class="material-symbols-outlined">logout</span>
+                        <a href="#" (click)="logout()">Logout</a>
+                      </li>
+
+                      <li class="contact">
+                        <h4>Contact Description</h4>
+                      </li>
+                  </ul>
+  </aside>
+
+  <div class="content">
+    <div class="search-background">
+      <img src="../../assets/background/seachBackground.png" alt="">
+      <div class="seachBackground-title">Our New Collection</div>
+      <div class="search-input-field">
+        <input type="text" id="name2" name="name2" placeholder="Search">
+      </div>
+    </div>
+
+    <div class="btn">
+      <button class="Collection" type="button"><h2>New Collection</h2></button>
+      <button class="artist" type="button"><h2>Artist</h2></button>
+      <button class="paintings" type="button"><h2>Paintings</h2></button>
+    </div>   
+  </div>
+  
+  <!-- Displayed Items when Admin upload -->
+  <div class="product-list-container">
+    <div class="product-list">
+      <div *ngFor="let product of products" class="product-item" (click)="openPreview(product)">
+        <img [src]="product.imageUrl" alt="{{ product.name }}">
+        <div class="product-name"><h3>{{ product.name }} by {{ product.creator }}</h3></div>
+        <div class="product-price"><b>₱{{ product.price }}</b></div>
+        <p>Size: {{ product.size }}</p>
+        <p>Description: {{ product.description }}</p>
+      </div>
+    </div>
+  </div>
+
+ <!-- Preview Items when clicked -->
+<div *ngIf="selectedProduct" class="modal" (click)="closePreview()">
+  <div class="modal-content" (click)="$event.stopPropagation()">
+    <span class="close" (click)="closePreview()">&times;</span>
+    <div class="modal-body">
+      <img [src]="selectedProduct.imageUrl" alt="{{ selectedProduct.name }}">
+      <div class="product-details">
+        <h3>{{ selectedProduct.name }} by {{ selectedProduct.creator }}</h3>
+        <p><b>Price:</b> ₱{{ selectedProduct.price }}</p>
+        <p><b>Size:</b> {{ selectedProduct.size }}</p>
+        <p><b>Description:</b> {{ selectedProduct.description }}</p>
+        <button class="add-to-cart-btn" (click)="addToCart(selectedProduct)">Add to Cart</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

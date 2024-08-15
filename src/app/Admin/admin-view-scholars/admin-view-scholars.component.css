@@ -1,0 +1,141 @@
+body {
+  background-image: url(../../../assets/background/homeBackGround.png); /* Your background image */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed; /* Fix the background image in place */
+  overflow-y: auto;
+  font-family: 'Holiday', sans-serif; 
+  height: 100vh;
+  width: 100%;  
+  background-position: center;
+}
+
+/* Container styles */
+.content-row {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px; /* Space between the two form containers */
+}
+
+.form-container {
+  flex: 1;
+  background-color: #ffffff; /* White background for the form containers */
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+/* Heading styles */
+.form-container h3 {
+  margin-bottom: 15px;
+  font-size: 22px;
+  color: #007bff;
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+form div {
+  margin-bottom: 15px;
+}
+
+form label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 16px;
+  color: #555;
+}
+
+form input {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 95%;
+}
+
+form button {
+  padding: 12px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+form button:hover {
+  background-color: #0056b3;
+}
+
+/* Scholars list styles */
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  padding: 15px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  background-color: #f9f9f9;
+  font-size: 16px;
+  color: #333;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+li span {
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+li span:hover {
+  color: #007bff; /* Change text color on hover */
+}
+
+button {
+  background-color: #dc3545; /* Red background for delete button */
+  color: white; /* White text color */
+  padding: 8px 16px; /* Space inside the button */
+  border: none; /* Remove default border */
+  border-radius: 4px; /* Rounded corners */
+  font-size: 16px; /* Font size */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: background-color 0.3s ease; /* Smooth transition for hover effects */
+}
+
+button:hover {
+  background-color: #c82333; /* Darker red for hover effect */
+}
+
+/* Back button styles */
+.back-button {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-bottom: 20px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  height: 40px;
+}
+
+.back-button a {
+  color: white;
+  text-decoration: none;
+}
+
+.back-button:hover {
+  background-color: #0056b3;
+}

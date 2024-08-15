@@ -1,0 +1,123 @@
+body{
+    background-image: url(../../../assets/background/BackGround.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow-y: auto;
+}
+.whitebox{
+    width: 500px; /* Set the width of the box */
+    height: 510px; /* Set the height of the box */
+    background-color: rgba(255, 255, 255, 0.5); /* Set background color */
+    border: 1px rgba(255, 255, 255, 0.4); /* Add border */
+    border-radius: 30px; /* Add border radius for rounded corners */
+    padding: 20px; /* Add padding inside the box */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+   
+}
+.graybox{
+    width: 475px; /* Set the width of the box */
+    height: 490px; /* Set the height of the box */
+    background-color: #1D2D21; /* Set background color */
+    border: 1px solid #1D2D21; /* Add border */
+    border-radius: 30px; /* Add border radius for rounded corners */
+    padding: 20px; /* Add padding inside the box */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: 'Canvas Sans', sans-serif;
+    
+   
+}
+.graybox h2{
+    color: #ffffff ;
+    font-size: 30px;
+    text-align: center;
+    margin-top: 15px;
+}
+
+.graybox span.artist{
+    color: #CB6CE6;
+    font-size: 30px;
+}
+.graybox span.buyer{
+    color: #FFDE59;
+    font-size: 30px;
+    border: 2px solid #FFDE59; /* Add border */
+    padding: 5px 10px; /* Add padding to adjust spacing */
+    border-radius: 5px; /* Add border radius for rounded corners */
+}
+.side-by-side{
+    text-align: center; /* Center the content horizontally */
+}
+.side-by-side span{
+    margin-bottom: -4%;
+    display: inline-block;
+    margin: 0 20px; 
+}
+
+.input-fields input {
+    width: 290px; /* Set width for the input fields */
+    height: 50px; /* Set height for the input fields */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 30px; /* Add border radius for rounded corners */
+    padding: 0 10px; /* Add padding */
+    margin-bottom: 10px; /* Add margin bottom for spacing */
+    font-size: 16px; /* Set font size */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+
+.input-fields input:focus {
+    outline: none; /* Remove outline when input field is focused */
+    border-color: #007bff; /* Change border color on focus */
+}
+.input-fields{
+    margin-top: 5%;
+    text-align: center;
+    
+}
+.btn {
+    text-align: center; /* Center the button horizontally */
+    margin-top: 0%;
+}
+
+.btn button {
+    background-color: transparent; /* Transparent background */
+    border: 2px solid #5CE1E6; /* Border color */
+    border-radius: 20px; /* Rounded corners */
+    padding: 10px 20px; /* Padding */
+    transition: background-color 0.3s, color 0.3s; /* Transition for background-color and color */
+}
+
+.btn button h2 {
+    color: #5CE1E6; /* Text color */
+    margin: 0; /* Remove margin from the heading */
+    font-size: 24px; /* Font size */
+}
+
+.btn button:hover {
+    background-color: #5CE1E6; /* Background color on hover */
+    
+}
+
+.btn button:hover h2 {
+    color: #1D2D21; /* Text color on hover */
+}
+
+.btn button:focus {
+    outline: none; /* Remove outline when button is focused */
+}
+#name4::placeholder {
+    color: red; /* Set placeholder color to red */
+}
+.already-have-account h2{
+    margin-top: 8%;
+    font-size: 25px;
+    color: white;
+}
+
+
+

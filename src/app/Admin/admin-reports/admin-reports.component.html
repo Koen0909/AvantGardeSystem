@@ -1,0 +1,14 @@
+<table>
+  <thead>
+    <tr>
+      <th>Month</th>
+      <th>Total Sales</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let data of salesData">
+      <td>{{ data.month }}</td>
+      <td>{{ data.totalSales | currency }}</td>
+    </tr>
+  </tbody>
+</table>

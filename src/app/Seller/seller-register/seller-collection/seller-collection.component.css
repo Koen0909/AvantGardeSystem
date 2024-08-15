@@ -1,0 +1,314 @@
+body {
+    background-image: url(../../../../assets/background/homeBackGround.png); /* Your background image */
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed; /* Fix the background image in place */
+    overflow-y: auto; /* Allow scrolling for the entire body */
+    font-family: 'Holiday', sans-serif; 
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+}
+.navbar {
+    position: fixed; /* Position the header */
+    top: 0; /* Position it at the top of the viewport */
+    left: 0; /* Position it at the left of the viewport */
+    right: 0; /* Position it at the right of the viewport */
+    height: 100px; /* Set the height of the header */
+    background-color: rgba(112, 60, 132, 0.815); /* Set the background color with reduced opacity */
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Align items vertically */
+    z-index: 1; /* Set a higher z-index to keep it above other elements */
+}
+.obra-logo img {
+    margin-top: 4px;
+    margin-left: 25px;
+    width: 90px; /* Set the width of the image */
+    height: auto; /* Maintain aspect ratio */
+}
+.title {
+    margin-top: 1%;
+    margin-left: 25px;
+    color: #fff; /* Set text color */
+    font-size: 24px; /* Set font size */
+  }
+  .nav-btn{
+    margin-top: 1%;
+    display: flex; /* Use flexbox for layout */
+    margin-left: 550px;
+    cursor: pointer; /* Change cursor to pointer on hover */
+    transition: background-color 0.3s ease; /* Add transition effect */
+  }
+.nav-btn a {
+    text-decoration: none; /* Remove underline */
+    color: white; /* Set default text color to white */
+}
+.nav-btn h2:hover {
+    color: #5CE1E6; /* Set hover color for all buttons */
+}
+.collection-btn a {
+    color: #5CE1E6; /* Reset color for .home-btn to its initial value */
+}
+.collection-btn h2:hover {
+    color: white; /* Specify the color you want on hover */
+} 
+.collection-btn, .home-btn, .about-btn {
+    margin-right: 60px;
+}    
+.search-background {
+    position: relative; /* Ensure the container is positioned relatively */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center content horizontally */
+    align-items: center; /* Center content vertically */
+    height: 100vh; /* Set height to 100% of the viewport height */
+    z-index: 0; /* Set a lower z-index to keep it behind other elements */
+}
+.search-input-field {
+    position: absolute; /* Position the input field relative to the container */
+    top: 50%; /* Position it 50% from the top of the container */
+    left: 50%; /* Position it 50% from the left of the container */
+    transform: translate(-50%, -50%); /* Center the input field */
+    z-index: 1; /* Ensure the input field appears above the image */
+}
+.search-input-field input {
+    width: 700px; /* Set width for the input fields */
+    height: 50px; /* Set height for the input fields */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 30px; /* Add border radius for rounded corners */
+    padding: 0 10px; /* Add padding */
+    font-size: 16px; /* Set font size */
+    margin-bottom: 350px;
+    margin-right: 500px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+.product-list-container {
+    display: flex;
+    justify-content: center; /* Center the container horizontally */
+    align-items: center; /* Center the container vertically */
+    padding: 20px;
+    padding-top: 25%;
+    flex-wrap: wrap; /* Ensure the container wraps the content */
+    margin-top: -60%;
+    margin-left: 1%;
+}
+.product-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px; /* Adjust the gap between the items */
+    padding: 20px;
+    justify-content: center; /* Center the content within the container */
+    z-index: -0;
+}
+.product-item {
+    width: 25%;
+    height: auto; /* Set the height of the box */
+    background-color: rgba(146, 146, 146, 0.4); /* Set background color with opacity */
+    border-radius: 30px; /* Add border radius for rounded corners */
+    padding: 20px; /* Add padding inside the box */
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center the content horizontally */
+    justify-content: space-between; /* Space out the content vertically */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a subtle shadow for depth */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+.product-item:hover {
+    transform: scale(1.05); /* Scale up on hover */
+}
+.product-item img {
+    max-height: 170px; /* Set the maximum height of the image */
+    width: 100%; /* Maintain the aspect ratio */
+    display: block; /* Ensure the image is displayed as a block element */
+    margin: auto; /* Center the image horizontally */
+    border-radius: 15px; /* Rounded corners for the image */
+}
+.product-item h2 {
+    font-size: 1.2em;
+    margin: 10px 0 5px;
+}
+.product-item p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+.product-item .product-price {
+    font-weight: bold;
+    font-size: 1.1em;
+}
+.sidebar {
+    position: fixed;
+    top: 0;
+    right: 0; /* Changed from left: 0 */
+    width: 110px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: transparent;
+    transition: width 0.3s ease;
+    z-index: 1;
+}
+.sidebar:hover {
+    width: 260px;
+    height: 100%;
+    background-color: #6F3C84;
+}
+.sidebar:hover img {
+    margin-left: 40%;
+}
+.sidebar .logo {
+    color: #ffffff;
+    display: flex;
+    align-items: center;
+    padding: 25px 10px 15px;
+}
+.logo img {
+    width: 50px;
+    border-radius: 50%;
+}
+.logo h2 {
+    font-size: 1.15rem;
+    font-weight: 600;
+    margin-left: 15px;
+    display: none;
+}
+.sidebar:hover .logo h2 {
+    display: block;
+}
+.sidebar .links {
+    list-style: none;
+    margin-top: 20px;
+    overflow-y: auto;
+    scrollbar-width: none;
+    height: calc(100% - 140px);
+}
+.sidebar .links::-webkit-scrollbar {
+    display: none;
+}
+.links li {
+    display: flex;
+    border-radius: 4px;
+    align-items: center;
+}
+.links li:hover {
+    cursor: pointer;
+    background: #000000;
+    color: #fff;
+}
+.links h4 {
+    color: #ffffff;
+    font-weight: 500;
+    display: none;
+    margin-bottom: 10px;
+}
+.sidebar:hover .links h4 {
+    display: block;
+}
+.links hr {
+    margin: 10px 8px;
+    border: 1px solid #ffffff;
+}
+.sidebar:hover .links hr {
+    border-color: transparent;
+}
+.links li span {
+    padding: 12px 10px;
+}
+.links li a {
+    padding: 10px;
+    color: #ffffff;
+    display: none;
+    font-weight: 500;
+    white-space: nowrap;
+    text-decoration: none;
+}
+.sidebar:hover .links li a {
+    display: block;
+}
+
+/* Preview css styles */
+.modal {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.7);
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 90%;
+    height: 90%;
+    max-width: 800px;
+    border-radius: 15px;
+    position: relative;
+  }
+  
+  .close {
+    color: #aaa;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 32px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-body {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Space between image and details */
+  }
+  
+  .modal-content img {
+    max-width: 40%;
+    height: auto;
+    border-radius: 10px;
+  }
+  
+  .product-details {
+    flex-grow: 1;
+    font-size: 18px;
+  }
+  
+  .product-details h3 {
+    margin: 10px 0;
+    font-size: 24px;
+  }
+  
+  .product-details p {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  /* Add to Cart button styles */
+  .add-to-cart-btn {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    margin-top: 20px;
+    background-color: #007bff; /* Button background color */
+    color: white; /* Button text color */
+    border: none;
+    border-radius: 5px;
+    font-size: 18px; /* Button text size */
+    cursor: pointer;
+    text-align: center;
+  }
+  
+  .add-to-cart-btn:hover {
+    background-color: #0056b3; /* Button background color on hover */
+  }
